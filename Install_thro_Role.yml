@@ -1,6 +1,4 @@
 - hosts: tag_role_1
   become: yes
-  become_method: sudo
-  remote_user: root
   roles: 
     - lb-nginx
