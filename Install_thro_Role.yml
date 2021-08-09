@@ -1,4 +1,4 @@
-- hosts: tag_ansible_node
+- hosts: Ansbile_role_node
   become: yes
   become_method: sudo
   remote_user: root
