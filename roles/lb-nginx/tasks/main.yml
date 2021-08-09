@@ -4,10 +4,11 @@
   yum:
     name: http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 
-- name: Install Apache
+- name: Install Nginx
   yum:
     name: nginx
     state: present
+    enablerepo: nginx
 
 - name: Start Nginx Server
   service:
