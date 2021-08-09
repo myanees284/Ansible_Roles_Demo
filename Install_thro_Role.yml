@@ -1,4 +1,4 @@
 - hosts: tag_ansible_node
-  become: True
+  become: yes
   roles: 
     - lb-nginx
