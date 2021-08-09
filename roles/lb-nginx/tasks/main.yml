@@ -1,2 +1,17 @@
 ---
-# tasks file for lb-nginx
+# tasks file for lb-ngix
+- name: Configure Nginx
+  yum:
+    name: http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+- name: Install Apache
+  yum:
+    name: nginx
+    state: present
+
+- name: Start Nginx Server
+  service:
+    name: nginx
+    status: started
+    enabled: yes
+
