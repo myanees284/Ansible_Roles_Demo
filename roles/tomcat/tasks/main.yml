@@ -13,3 +13,10 @@
     
 - name: Start tomcat service
   shell: nohup /usr/local/{{ tomcat_pkg }}/bin/startup.sh
+
+- name: Copy the config file
+  copy: 
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: 
+    - restart the server
