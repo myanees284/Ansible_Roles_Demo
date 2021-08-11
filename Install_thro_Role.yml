@@ -2,3 +2,8 @@
   become: yes
   roles: 
     - lb-nginx
+    - tomcat
+  
+  vars:
+    - tomcat_url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
+    - tomcat_pkg: apache-tomcat-8.5.69
