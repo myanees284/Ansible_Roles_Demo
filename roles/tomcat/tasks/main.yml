@@ -1,2 +1,15 @@
 ---
 # tasks file for tomcat
+- name: Install Java
+  yum:
+    name: java
+    state: latest
+
+- name: Download tomcat and unarchive
+  unarchive:
+    src: "{{ tomcat_url }}"
+    dest: /usr/local/
+    remote_src: True
+    
+- name: Start tomcat service
+  shell: nohup /usr/local/{{ tomcat_pkg }}/bin/startup.sh
