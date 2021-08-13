@@ -1,4 +1,4 @@
-- hosts: tag_role_1
+- hosts: tag_apache_server
   become: yes
   roles: 
     - tomcat
