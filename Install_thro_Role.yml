@@ -1,4 +1,4 @@
-- hosts: ec2_Ansbile_MN_1
+- hosts: tag_ansible_node
   become: yes
   roles: 
     - apache

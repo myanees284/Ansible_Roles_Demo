@@ -17,7 +17,7 @@
     enabled: yes
 
 - name: Copy the config file
-  copy: 
+  template: 
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
   notify: 
