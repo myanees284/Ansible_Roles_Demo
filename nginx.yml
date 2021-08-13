@@ -1,0 +1,4 @@
+- hosts: tag_nginx_server
+  become: yes
+  roles: 
+    - lb-nginx

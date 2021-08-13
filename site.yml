@@ -1,0 +1,9 @@
+- hosts: apache_server
+  become: yes
+  roles: 
+    - apache
+
+- hosts: tag_nginx_server
+  become: yes
+  roles: 
+    - lb-nginx
